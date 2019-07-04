@@ -161,6 +161,58 @@
     </script>
    </head>
   <body>
+<style>
+
+.sidenav {
+  width: 230px;
+  position: fixed;
+  z-index: 1;
+  top: 40px;
+  left: 10px;
+  
+  overflow-x: hidden;
+  padding: 8px 0;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #2196F3;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #064579;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.rcorners1 {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background: #FFFFFF;
+  padding: 20px; 
+  
+}
+</style>
+<div class="sidenav rcorners1">
+<p align="justify">
+<font color = "#696969" size = "2">
+Hello, <br>
+As some of you may have noticed that some of the student results were missing from the result, the bug causing that has been fixed and I would recommend you to redownload all your results to reverify your result percentage. Furthermore I would like to request you to please contact me on my email address in cause you find a bug or to report a problem.
+Also, I'm looking for a server host who can host this Software (Python + OpenCV), Preferably as a docker image, and If someone would like to help me with the frontend design feel free to do so ( as you can see my web dev skills are not really the finest . <br>Thank You <br> </font></p><p align="right"><font color = "#696969" size = "2">  -Anunay</font></p>
+
+
+</div>
 
     <div class="container">
       <form name = "Form" id="Form">
