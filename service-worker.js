@@ -2,6 +2,20 @@
 const FILES_TO_CACHE = [
   '/offline.html',
   '/icon512.png',
+  '/favicon.ico',
+  '/index.html',
+  '/install.js',
+  '/pace-style.css',
+  '/pace.min.js',
+  '/service-worker.js',
+  '/style.css',
+  'https://ricostacruz.com/nprogress/nprogress.js',
+  'https://ricostacruz.com/nprogress/nprogress.css',
+  'manifest.json',
+  'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js',
+  'https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.js',
+  '//wpcc.io/lib/1.0.2/cookieconsent.min.css',
+  '//wpcc.io/lib/1.0.2/cookieconsent.min.js',
 ];
 
     
@@ -25,7 +39,7 @@ const FILES_TO_CACHE = [
 'use strict';
 
 // CODELAB: Update cache names any time any of the cached files change.
-const CACHE_NAME = 'static-cache-v1';
+const CACHE_NAME = 'static-cache-v2';
 
 
 self.addEventListener('install', (evt) => {
