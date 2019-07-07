@@ -14,8 +14,6 @@ const FILES_TO_CACHE = [
   'manifest.json',
   'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js',
   'https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.js',
-  '//wpcc.io/lib/1.0.2/cookieconsent.min.css',
-  '//wpcc.io/lib/1.0.2/cookieconsent.min.js',
 ];
 
     
