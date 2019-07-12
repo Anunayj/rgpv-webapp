@@ -87,7 +87,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
      var Prefix;
         $(document).ready(function() {
             $('#Form').submit(function(e){
-              e.preventDefault();
+              e.preventDefault(); 12/07/19 - Fixed a bug where all result of corses liste d after B-Pharm were not working oops. 
               $("#submit").prop("disabled", true)
               $("#submit").prop("style", "color:gray")
               NProgress.configure({ trickle: false });
@@ -190,7 +190,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
      async function getResult(){
-        return($.get(
+        return($.get( 12/07/19 - Fixed a bug where all result of corses liste d after B-Pharm were not working oops. 
             serverip+"/getfile",
             {'uuid' : uuid},
             function(data) {
@@ -573,7 +573,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <font color = "#696969" size = "2">
 Hello, <br>
 <ul style="padding-left:20px;margin:0px;">
-<li> 12/07/19 - Fixed a bug where all result of corses liste d after B-Pharm were not working oops.
+<li> 12/07/19 - Fixed a bug where all result of corses listed after B-Pharm were mapped to the consecutive course.
 <li>As some of you may have noticed that some of the student results were missing from the result, the bug causing that has been fixed and I would recommend you to redownload all your results to reverify your result percentage. <li>Furthermore I would like to request you to please contact me on my email address in cause you find a bug or to report a problem.
 <li>Also, I'm looking for a server host who can host this Software (Python + OpenCV), Preferably as a docker image,<li> and If someone would like to help me with the frontend design feel free to do so ( as you can see my web dev skills are not really the finest)</li></ul> . <br>Thank You <br> </font></p><p align="right" style="margin:0px;"><font color = "#696969" size = "2">  -Anunay</font></p>
 
