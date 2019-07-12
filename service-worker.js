@@ -7,7 +7,6 @@ const FILES_TO_CACHE = [
   '/install.js',
   '/pace-style.css',
   '/pace.min.js',
-  '/service-worker.js',
   '/style.css',
   'https://ricostacruz.com/nprogress/nprogress.js',
   'https://ricostacruz.com/nprogress/nprogress.css',
@@ -37,7 +36,7 @@ const FILES_TO_CACHE = [
 'use strict';
 
 // CODELAB: Update cache names any time any of the cached files change.
-const CACHE_NAME = 'static-cache-v5';
+const CACHE_NAME = 'static-cache-v6';
 
 
 self.addEventListener('install', (evt) => {
