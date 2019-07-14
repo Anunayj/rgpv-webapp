@@ -30,6 +30,9 @@ Oh btw the backend is hosted on heroku... and This  is just the front end that c
 
 <html lang="en" dir="ltr">
   <head>
+    <script>
+    dataLayer = [];
+    </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143314351-1"></script>
 <script>
@@ -87,7 +90,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
      var Prefix;
         $(document).ready(function() {
             $('#Form').submit(function(e){
-              e.preventDefault(); 
+              e.preventDefault();
               $("#submit").prop("disabled", true)
               $("#submit").prop("style", "color:gray")
               NProgress.configure({ trickle: false });
@@ -103,6 +106,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                           'semester':formData.get('semester'),
                           'maxroll':formData.get('roll'),
                           'rollPrefix':Prefix }
+              var p = {'event': 'submit'};
+              dataLayer.push(
+                                        jQuery.extend(p,data)
+                                      );
 
               $.ajax({
                   type: 'POST',
@@ -161,7 +168,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 alert("Looks like we are having some issues getting your request... Either the server discarded your request or There was a Internal server error, Please contact me for more information.")
                 resetButton()
               }else{
-                
+
                 setDownloadButton()
                 alert("Result Sucessfully Downloaded. Click on Download button to download.")
               }
@@ -190,7 +197,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
      async function getResult(){
-        return($.get( 
+        return($.get(
             serverip+"/getfile",
             {'uuid' : uuid},
             function(data) {
@@ -239,7 +246,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   position: fixed;
   z-index: 1;
   top: 70px;
-  
+
   overflow-x: hidden;
   padding: 8px 0;
 }
@@ -265,8 +272,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   background: #FFFFFF;
-  padding: 20px; 
-  
+  padding: 20px;
+
 }
 @media screen and (max-width: 1200px) {
   .sidenav {
@@ -276,8 +283,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   .rcorners1 {
   border-radius: 25px;
   background: #FFFFFF;
-  padding: 20px; 
-  
+  padding: 20px;
+
 }
   }
 @media screen and (max-width: 786px){
@@ -567,7 +574,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <button type="submit" class="button" name = "submit" id="submit"><span id="submitText" name="submitText">Submit it!</span><span name="download" id="download" hidden = "true">Download!</span></button>
       </div>
     </form>
-    </div>  
+    </div>
     <div class="sidenav rcorners1">
 <p align="justify" style="margin:0px;padding:5px;">
 <font color = "#696969" size = "2">
@@ -579,15 +586,15 @@ Hello, <br>
 
 
 </div>
-           
+
 <div  class="rcorners1" align="center" style="margin-top:10px;" id="installDiv" hidden>
 <p><font size="3" color='#696969'> Tired of opening this website again and again? Add it to your home screen here: </font></p>
-<button aria-label="Install" id="butInstall" class="button" style="margin:10px;"><font color="white" size="3">Add to homescreen!</font></button>      
+<button aria-label="Install" id="butInstall" class="button" style="margin:10px;"><font color="white" size="3">Add to homescreen!</font></button>
 </div>
-         
-           
-           
-           
+
+
+
+
            <font size="1" color='gray'>This website was developed and is being maintained by Anunay (<a href="mailto:anunay.j1@gmail.com">anunay.j1@gmail.com</a>), Please contact me for further support : ) or to report bugs. <br>
     Disclaimer: We are in no way affilated to RPGV, and do not gaurantee the accuracy of this Webiste. This website employs the use of Webbots and Machine Learning Algorithms to Extract the result. Please contact me on more insight on how this works.<br>
 Furthermore If you are a web developer and would like to improve this website feel free to contact me.</font>
@@ -607,7 +614,7 @@ Furthermore If you are a web developer and would like to improve this website fe
         });
   });
 }
-                  
+
          </script>
          <script src="/install.js"></script>
 </html>
