@@ -321,8 +321,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
         <div class="form-group">
-          <select id="collegeCode" name="collegeCode" onchange="custom()">
-            <option value="0" selected> Custom, I know the college code!</option>
+          <select id="collegeCode" name="collegeCode" onchange="custom()" disabled>
+            <option value="0"> Custom, I know the college code!</option>
             <option value="171">Acropolis Institute of Tech & Research, Bhopal ( 2007 )</option>
             <option value="827">Acropolis Institute of Tech & Research, Indore (2005)</option>
             <option value="307">Aditya College of Tech. & Sc., Satna (2007)</option>
@@ -438,7 +438,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <option value="836">Royal College of Technology, Indore (2006)</option>
             <option value="185">Rukmani Devi Institute of Sc. & Tech., Bhopal (2007)</option>
             <option value="902">Rustamji Institute of Technology (RIT), Tekanpur (1999)</option>
-            <option value="186">Sagar Inst. of Resc. Tech & Sc. (SIRTS), Bhopal (2007)</option>
+            <option value="186" selected>Sagar Inst. of Resc. Tech & Sc. (SIRTS), Bhopal (2007)</option>
             <option value="133">Sagar Inst. of Research & Tech., (SIRT) Bhopal (2003)</option>
             <option value="187">Sagar Inst. of Sc. & Tech. Bhopal (2007)</option>
             <option value="501">Sagar Institute of Research & Technology Excellence</option>
@@ -526,7 +526,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </script>
 
         <div class="form-group">
-          <input type="text" id="branch" style="text-transform: uppercase;" name="branch" minlength="2" maxlength="2" required/>
+          <input type="text" id="branch" style="text-transform: uppercase;" name="branch" minlength="2" maxlength="2" disabled/>
           <label for="input" class="control-label">Branch Code: <font color="red">*</font></label><i class="bar"></i>
           <font size="1" color="gray"><i>For example in 0133<b>CE</b>173D01, the next 2 (CE) digits are the Branch code.</i></font>
         </div>
