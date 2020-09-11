@@ -36,7 +36,7 @@ const FILES_TO_CACHE = [
 'use strict';
 
 // CODELAB: Update cache names any time any of the cached files change.
-const CACHE_NAME = 'static-cache-v10';
+const CACHE_NAME = 'static-cache-v11';
 
 
 self.addEventListener('install', (evt) => {
